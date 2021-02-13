@@ -1,4 +1,5 @@
 import React from 'react'
+import {Provider} from 'react-dom';
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
@@ -17,7 +18,9 @@ console.log("dispatch complete")
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+          <App />
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )
